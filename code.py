@@ -1,3 +1,15 @@
+streamlit
+opencv-python-headless==4.9.0.80
+mediapipe==0.10.11
+pandas==2.2.2
+numpy==1.26.4
+```eof
+
+## 2. Main Python File (No Change)
+
+The application code remains the same, as the issue is purely environmental.
+
+```python:Body Language Analyzer Web App:body_language_analyzer_app.py
 import streamlit as st
 import cv2
 import numpy as np
@@ -7,6 +19,8 @@ import pandas as pd
 import io
 from collections import deque
 from typing import Optional, Tuple, Dict, List
+import csv
+import json
 
 # ============================================================================
 # STREAMLIT CONFIGURATION & SETUP
@@ -431,3 +445,6 @@ if __name__ == "__main__":
     # Ensure all Streamlit elements are run inside the main function
     # Only the Streamlit app code is executed here.
     main()
+```eof
+
+This dependency pinning should resolve any environment-specific compilation or linking issues that were causing the installer to fail. Please try restarting the application now!
